@@ -1,0 +1,89 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7ec56194-f9c7-44b0-98f3-370c52468ab3</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>T1DPrediction.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>T1DPrediction</Name>
+    <RootNamespace>T1DPrediction</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
+    <TestFramework>none</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
+    <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="aiexplainer\AiExplain.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="aiexplainer\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dataprep\DataPrep.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dataprep\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="deepLearning\DeepLearning.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="deepLearning\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAPrediction.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="imputation\AiImputation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="imputation\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="T1DPrediction.py" />
+    <Compile Include="visualizer\AiVisualizer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="visualizer\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="aiexplainer\" />
+    <Folder Include="dataprep\" />
+    <Folder Include="deepLearning\" />
+    <Folder Include="imputation\" />
+    <Folder Include="models\" />
+    <Folder Include="visualizer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.10" />
+    <InterpreterReference Include="Global|PythonCore|3.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
