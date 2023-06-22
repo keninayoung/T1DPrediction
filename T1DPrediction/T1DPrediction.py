@@ -92,29 +92,7 @@ def main(argv):
     # IA Prediction AI
     runIAPredAI(args.dataTemporal, args.dataStatic)
 
-    # Olink proteomics/cytokine AI
-    #runOlinkAI(args.dataOlink, args.dataStatic)
 
-    dfData = pd.read_csv(args.data, sep='\t', lineterminator='\r', na_values=['(NA)', '?']).fillna(0)
-
-    # Static T1D data
-    runStaticAI(dfData)
-
-    #exit()
-
-    return
-
-# Function runs the olink (proteomics/cytokine) AI
-def runOlinkAI(olinkData, staticData):
-    # Created a oLink class object
-    # Will be used to call AI/Neural Network for Olink data.
-    objOlink = olink.OlinkNN(olinkData, staticData)
-
-    # Run AI on time series (temporal) data
-    objOlink.runAItimeSeries()
-
-    # Run AI on oLink as non-temporal
-    #objOlink.runAI()
     return
 
 # Function runs the IA Prediction AI
