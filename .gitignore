@@ -367,4 +367,4 @@ T1DPrediction/data
 T1DPrediction/models
 T1DPrediction/archive
 T1DPrediction/__pycache__
-youngkg.env.yml
+T1DPrediction/youngkg.env.yml
