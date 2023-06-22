@@ -25,8 +25,6 @@ print(mp.matplotlib_fname())
 
 
 import os
-
-
 import matplotlib.pyplot as plt
 plt.switch_backend("TkAgg")
 print(mp.get_backend())
@@ -136,9 +134,6 @@ class IAPredictionNN(object):
                         'probiotics_days_dur',
                         'probiotics_days_stop', 
                         'probiotics_days_start',
-                        #'probiotics_duration',
-                        #'probiotics_wk_stop', 
-                        #'probiotics_wk_start',
                         'formula_any_mos']
                       
                   
